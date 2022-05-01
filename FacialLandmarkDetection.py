@@ -20,7 +20,7 @@ while True:
     results = faceMesh.process(imgRGB)
     if results.multi_face_landmarks:
         for faceLms in results.multi_face_landmarks:
-            mpDraw.draw_landmarks(img, faceLms,mpFaceMesh.FACE_CONNECTIONS, drawSpec, drawSpec)
+            mpDraw.draw_landmarks(img, faceLms,mpFaceMesh.FACEMESH_TESSELATION, drawSpec, drawSpec)
 
             for id,lm in enumerate(faceLms.landmark):
                 ih, iw, ic = img.shape
